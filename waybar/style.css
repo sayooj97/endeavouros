@@ -1,0 +1,156 @@
+/* Mystic Ember Gruvbox Dark Theme */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 11pt;
+    min-height: 0;
+    /* background-color: #0a0e0f; Dark ash black */
+    /* color: #bdae93;          Gruvbox pale */
+  }
+  
+  /* Tooltip styling */
+  tooltip {
+    border-radius: 5px;
+    border: 1px solid #415c6c; /* Storm blue */
+  }
+  
+  /* Window bar */
+  window#waybar {
+    color: #bdae93;           /* Gruvbox pale */
+    background-color: #000000; /* AMOLED black */
+  }
+  
+#workspaces button {
+    all: unset;
+    padding: 5px 8px;
+    color: #5d4b59; /* Bruised plum - subtle default */
+    transition: all .2s ease;
+}
+
+/* Normal hover */
+#workspaces button:hover {
+    color: #f47b6a; /* Ember orange - accent punch */
+}
+
+/* Active workspace (current workspace) */
+#workspaces button.active {
+    color: #415c6c; /* Storm blue - primary */
+}
+
+/* Empty workspace */
+#workspaces button.empty {
+    color: #282828; /* Dark gray */
+}
+
+/* Empty workspace hover */
+#workspaces button.empty:hover {
+    color: #fabd2f; /* Bright yellow */
+}
+
+/* Empty + active */
+#workspaces button.empty.active {
+    color: #b8bb26; /* Bright green */
+}
+
+/* Button with windows (occupied workspace) */
+#workspaces button.occupied {
+    color: #b16286; /* Purple - mystic */
+}
+
+/* Hover on occupied */
+#workspaces button.occupied:hover {
+    color: #d3869b; /* Bright purple */
+}
+
+/* Active occupied workspace */
+#workspaces button.occupied.active {
+    color: #8ec07c; /* Bright aqua */
+}
+  
+  /* Bar modules */
+  #custom-date,
+  #clock,
+  #battery,
+  #pulseaudio,
+  #network,
+  #temperature,
+  #cpu {
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: #bdae93;           /* Gruvbox pale */
+    border-radius: 3px;
+  }
+  
+  /* Power button */
+  #custom-power {
+    color: #bdae93;            /* Gruvbox pale */
+    border-radius: 3px;
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+/* Hover for power button */
+#custom-power:hover {
+    color: #fb4934; /* Bright red */
+}
+  
+  /* Battery states */
+  #battery.charging {
+    color: #bdae93;
+  }
+  #battery.warning:not(.charging),
+  #battery.critical:not(.charging) {
+    color: #bdae93;            /* Gruvbox pale */
+  }
+  
+  /* Hover for each module */
+  #custom-date:hover {
+    color: #d79921; /* Yellow */
+  }
+  #clock:hover {
+    color: #83a598; /* Bright blue */
+  }
+  #battery:hover {
+    color: #8ec07c; /* Bright aqua */
+  }
+  #pulseaudio:hover {
+    color: #d3869b; /* Bright purple */
+  }
+  #network:hover {
+    color: #fabd2f; /* Bright yellow */
+  }
+  #temperature.warning:hover {
+    color: #cc241d; /* Red */
+  }
+#temperature:hover {
+    color: #fe8019; /* Bright orange */
+}
+  #cpu:hover {
+    color: #f47b6a; /* Ember orange */
+  }
+  
+  /* CPU tooltip */
+  #cpu.tooltip {
+    color: #bdae93; /* Gruvbox pale */
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10pt;
+  }
+  /* Power profile module */
+  #power-profiles-daemon {
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: #bdae93; /* Gruvbox pale */
+    border-radius: 3px;
+  }
+
+  /* Hover for power profiles */
+  #power-profiles-daemon.power-saver:hover {
+    color: #8ec07c; /* Bright green */
+  }
+  #power-profiles-daemon.performance:hover {
+    color: #fabd2f; /* Thunder yellow */
+  }
+  #power-profiles-daemon.balanced:hover {
+    color: #d79921; /* Balanced yellow */
+  }

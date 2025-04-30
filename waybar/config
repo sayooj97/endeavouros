@@ -1,0 +1,88 @@
+{
+    "position": "top", 
+    "height": 24,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["power-profiles-daemon"],
+    "modules-right": ["network","pulseaudio","tray","cpu","temperature","battery","custom/date", "clock", "custom/power"],
+
+"hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+        "active": "",
+        "default": "",
+        "empty": ""
+    },
+    "persistent-workspaces": {
+        "*": [ 1,2,3,4,5 ]
+    },
+    "visible-on": "visible"
+     },
+	"custom/power": {
+		"format": "",
+		"on-click": "$HOME/.scripts/waybar-power.sh"
+	},
+	"clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%Y-%m-%d}"
+    },
+	"battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%", 
+        "format-plugged": " {capacity}%",   
+        "format-alt": "{time} {icon}",
+        "format-full": "󰁹 {capacity}%",      
+        "format-icons": ["", "", ""]
+    },
+	"network": {
+        	"format-wifi": "  {essid}",
+        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "Disconnected",
+        	"format-alt": "{ifname}: {ipaddr}/{cidr}",
+            "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
+	},
+	"pulseaudio": {
+		"format": "{icon}  {volume}%",
+        	"format-muted": "󰖁 Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "temperature": {
+        "format": "{temperatureC}°C "
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "tooltip-format": "Core {core}: {core_usage}%",
+        "max-length": 10,
+        "interval": 1
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    }
+    
+}
