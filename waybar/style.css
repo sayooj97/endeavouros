@@ -108,7 +108,7 @@
   #network:hover {
     color: #fabd2f; /* Bright yellow */
   }
-  #temperature.warning:hover {
+  #temperature.warning {
     color: #cc241d; /* Red */
   }
 #temperature:hover {
